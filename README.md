@@ -13,7 +13,8 @@
 
 ### estrutura de dados 
 
-```classDiagram 
+``` mermaid
+classDiagram 
     Usuario --> post: OneTomany 
     Usuario --> comentario: OneTomany 
     post --> comentario: OneTomany 
@@ -54,6 +55,5 @@
         + usuario_id
         + post_id
         + criado_em
-
     }
     ```
