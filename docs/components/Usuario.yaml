@@ -1,0 +1,42 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 1
+
+  nome:
+    type: string
+    example: Chico César
+
+  nickname:
+    type: string
+    example: chico_c
+
+  bio:
+    type: string
+    example: Cantor paraibano de alma incendiária e poesia afiada.
+
+  foto:
+    type: string
+    format: uri
+    example: https://meusite.com/imagens/chico.jpg
+
+  email:
+    type: string
+    format: email
+    example: chico@cesar.com
+
+  senha:
+    type: string
+    format: password
+    example: "SenhaF0rte123!"
+
+  criado_em:
+    type: string
+    format: date-time
+    example: "2025-07-31T19:00:00Z"
+
+  atualizado_em:
+    type: string
+    format: date-time
+    example: "2025-07-31T19:30:00Z"

@@ -1,0 +1,22 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 301
+
+  usuario_id:
+    type: integer
+    example: 7
+
+  post_id:
+    type: integer
+    example: 42
+
+  conteudo:
+    type: string
+    example: "Isso aqui é arte. Não tem algoritmo que engula."
+
+  criado_em:
+    type: string
+    format: date-time
+    example: "2025-07-31T20:45:00Z"

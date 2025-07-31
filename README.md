@@ -1,26 +1,26 @@
-# api-instagram
+# API do Instagram
 
-## tecnologias 
-- node
-- expressJS
+## Tecnologias
+- NodeJS
+- ExpressJS
 - MySQL
 
-### recursos 
-- usuarios
-- posts
-- comentarios
-- curtidas 
+### Recursos
+- Usuarios
+- Posts
+- Comentarios
+- Curtidas
 
-### estrutura de dados 
+### Estrutura dos Dados
 
-``` mermaid
-classDiagram 
-    Usuario --> post: OneTomany 
-    Usuario --> comentario: OneTomany 
-    post --> comentario: OneTomany 
-    post --> curtida:OneTomany
-    Usuario --> curtida:OneTomany
-     
+```mermaid
+classDiagram
+    Usuario --> Post: OneToMany
+    Usuario --> Comentario: OneToMany
+    Post --> Comentario: OneToMany
+    Post --> Curtida: OneToMany
+    Usuario --> Curtida: OneToMany
+
     class Usuario {
         + id
         + nome
@@ -31,29 +31,30 @@ classDiagram
         + senha
         + criado_em
         + atualizado_em
-
     }
-    class post{
-        + id 
+
+    class Post {
+        + id
         + usuario_id
         + foto
         + legenda?
-        + Localizacao?
+        + localizacao?
         + criado_em
         + atualizado_em?
-        }
-    class comentario{
+    }
+
+    class Comentario {
         + id
         + usuario_id
         + post_id
         + conteudo
         + criado_em
-
     }
-    class curtida{
+
+    class Curtida {
         + id
         + usuario_id
         + post_id
         + criado_em
     }
-    ```
+```

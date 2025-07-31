@@ -1,0 +1,18 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 101
+
+  usuario_id:
+    type: integer
+    example: 7
+
+  post_id:
+    type: integer
+    example: 42
+
+  criado_em:
+    type: string
+    format: date-time
+    example: "2025-07-31T20:15:00Z"

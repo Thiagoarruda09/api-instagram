@@ -1,34 +1,37 @@
 openapi: 3.1.1
 info:
-    title: API de exemplo do instagram
-    description: uma api de teste
-    version: 0.0.1
+  title: API de exemplo do instagram
+  description: Uma api de teste
+  version: 0.0.1
 
-tags: 
-  - usuarios
-  - postagens
-  - comentarios
-  - curtidas
-
+tags:
+  - Usuarios
+  - Postagens
+  - Comentarios
+  - Curtidas
 
 paths:
-   /api/usuarios:
-     get:
-        tag: [usuarios]
-        description: buscar todos os usuarios
-     post:
-   /api/usuarios/id:
-     get:
-     post:
+  /api/usuarios:
+   $ref: './paths/Usuario/Collection.yaml'
+  /api/usuarios/{id}:
+   $ref: './paths/Usuario/Item.yaml'
+   
+
+  /api/postagens:
+    $ref: './paths/Post/Collection.yaml'
+
+  /api/postagens/{id}:
+    $ref: './paths/Post/Item.yaml'
+
 
 components:
-    schemas:
-      Usuario:
-        type: object
-        properties: 
-          id:
-            type: interger
-            example: 1
-          nome:
-             type: string
-             example: chico cesar
+  schemas:
+    Usuario:
+      $ref: './components/Usuario.yaml'
+    Post:
+      $ref: './components/Post.yaml'
+    Curtida:
+      $ref: './components/Curtida.yaml'
+    Comentario:
+      $ref: './components/Comentario.yaml'
+    

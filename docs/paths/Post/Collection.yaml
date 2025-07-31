@@ -1,0 +1,23 @@
+get:
+  tags: [Postagens]
+  summary: Todas as postagens
+  description: Buscar todas as postagens
+  responses:
+    200:
+      description: array de postagens
+      content: 
+        "application/json":
+          schema:
+            type: array
+            items:
+              allOf:
+                - $ref: '../../components/Post.yaml'
+post:
+  tags: [Postagens]
+  summary: cadastra uma postagem
+  requestBody:
+    content:
+      "application/json":
+        schema:
+          $ref: '../../components/Post.yaml'
+          

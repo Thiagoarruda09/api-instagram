@@ -1,0 +1,7 @@
+ get:
+      tags: [Postagens]
+      description: buscar um usuario
+ patch:
+      tags: [Postagens]
+ delete:
+      tags: [Postagens]

@@ -1,0 +1,35 @@
+type: object
+properties:
+  id:
+    type: integer
+    example: 42
+
+  usuario_id:
+    type: integer
+    example: 1
+
+  foto:
+    type: string
+    format: uri
+    example: https://meuredesocial.com/posts/imagem42.jpg
+
+  legenda:
+    type: string
+    nullable: true
+    example: "Um por do sol que queimava mais que minhas saudades."
+
+  localizacao:
+    type: string
+    nullable: true
+    example: "Praia de Iracema, Fortaleza - CE"
+
+  criado_em:
+    type: string
+    format: date-time
+    example: "2025-07-31T18:45:00Z"
+
+  atualizado_em:
+    type: string
+    format: date-time
+    nullable: true
+    example: "2025-07-31T19:10:00Z"
